@@ -16,7 +16,7 @@ router.use(express.urlencoded());
 router.post("/post", (req, res) => {
   let inputUrl = req.body.longurl;
   let id = randomID();
-  let shortUrl = `http://localhost:3000/${id}`;
+  let shortUrl = `https://node-day7-cw-url-shortner-app.onrender.com//${id}`;
 
   const file = JSON.parse(fs.readFileSync(filePath, "utf-8"));
   file[id] = inputUrl;
